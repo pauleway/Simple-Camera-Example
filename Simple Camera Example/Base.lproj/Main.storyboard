@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Simple_Camera_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vhf-n9-1eu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XwA-2H-oaK">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="m12-Gi-qNw"/>
+                                    <barButtonItem systemItem="camera" id="h7S-Ej-8Jy">
+                                        <connections>
+                                            <action selector="launchPhotoPicker:" destination="BYZ-38-t0r" id="HUC-g0-Tsf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="lzU-ze-ZeQ"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vhf-n9-1eu" firstAttribute="leading" secondItem="XwA-2H-oaK" secondAttribute="leading" id="Jog-P0-5SX"/>
+                            <constraint firstItem="XwA-2H-oaK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QGN-Bv-BsQ"/>
+                            <constraint firstItem="Vhf-n9-1eu" firstAttribute="bottom" secondItem="XwA-2H-oaK" secondAttribute="top" id="Qcw-l1-a5W"/>
+                            <constraint firstItem="Vhf-n9-1eu" firstAttribute="trailing" secondItem="XwA-2H-oaK" secondAttribute="trailing" id="aKW-We-OeH"/>
+                            <constraint firstItem="Vhf-n9-1eu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gFt-Lu-bcf"/>
+                            <constraint firstAttribute="trailing" secondItem="Vhf-n9-1eu" secondAttribute="trailing" id="yE8-t5-CdM"/>
+                            <constraint firstItem="Vhf-n9-1eu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zJn-BJ-bEe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Vhf-n9-1eu" id="qc8-JY-Myb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28" y="71.514242878560722"/>
+        </scene>
+    </scenes>
+</document>
